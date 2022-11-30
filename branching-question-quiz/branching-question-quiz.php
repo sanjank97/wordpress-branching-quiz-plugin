@@ -91,6 +91,14 @@ function add_plugin_script()
         'quiz_fontawesome_style', //unique name
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', //path url
     );
+     wp_enqueue_script(
+        'quiz_jquery_script', //unique name
+        'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', // path url
+        '',
+        time() //ver
+
+    );
+    
     wp_enqueue_script(
         'quiz_script', //unique name
         PLUGIN_URL.'assets/js/script.js', // path url
@@ -99,13 +107,7 @@ function add_plugin_script()
         
 
     );
-    wp_enqueue_script(
-        'quiz_jquery_script', //unique name
-        'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', // path url
-        '',
-        time() //ver
 
-    );
 
     wp_enqueue_script(
         'ajax_script', //unique name
