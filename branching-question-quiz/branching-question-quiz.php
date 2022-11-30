@@ -82,15 +82,16 @@ function myplugin_activate()
 function add_plugin_script()
 {
     wp_enqueue_style(
+    'quiz_fontawesome_style', //unique name
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', //path url
+    );
+    wp_enqueue_style(
         'quiz_style', //unique name
         PLUGIN_URL.'assets/css/style.css', //path url
         '', //dependencies
         time() //ver
     );
-    wp_enqueue_style(
-        'quiz_fontawesome_style', //unique name
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', //path url
-    );
+
      wp_enqueue_script(
         'quiz_jquery_script', //unique name
         'https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js', // path url
